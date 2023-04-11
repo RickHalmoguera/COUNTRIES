@@ -25,19 +25,19 @@ export function Cards(props) {
 
     if (countriesData.status === 404) {
         return (
-            <>
+            <div className="cards">
                 <h1>Sorry no found by the name "{props.filter}"</h1>
-            </>
+            </div>
         )
     }
   
   return (
-    <>  
+    <div className="cards">  
         {countriesData.map((country) => (
             <div className="card" key={country.name.common}>
                 <img className="card__image" src={country.flags.png} alt={country.name.common} />
                 <div  className="card__text">
-                    <h2 className="card__text__tag">{country.name.common} <span className="card__text__info"></span></h2>
+                    <h2 className="card__text__name">{country.name.common} <span className="card__text__info"></span></h2>
                     <p className="card__text__tag">Population: <span className="card__text__info"> {country.population.toLocaleString("en-US")}</span></p>
                     <p className="card__text__tag">Region: <span className="card__text__info">{country.region}</span></p>
                     <p className="card__text__tag">Capital: <span className="card__text__info">{country.capital}</span></p>
@@ -45,6 +45,6 @@ export function Cards(props) {
             </div>
             
         ))}
-    </>
+    </div>
   )
 }

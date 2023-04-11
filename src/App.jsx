@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { Cards } from './components/Cards'
+import './Css/App.css' 
 
 function App() {
   const [filter, setFilter] = useState('All')
@@ -15,14 +16,14 @@ function App() {
   }
   return (
     <>
-      <div className="header">
+      <header className="header">
         <h1 className="header__title">Where in the world?</h1>
-      </div>
+      </header>
       
       <div className="search">
         <input onChange={handleSearch} className="search__input" type="text" placeholder="Search for a country..."  ref={searchRef}/>
-        <label htmlFor='region'>Filter by Region</label>
           <select onChange={handleChange} className="search__select" id="region" ref={optionRef} >
+            <option label="Filter by region"></option>
             <option value="All">All</option>
             <option value="Africa">Africa</option>
             <option value="Asia">Asia</option>
