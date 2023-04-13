@@ -1,7 +1,9 @@
-
+import { useParams } from "react-router-dom"
 
 export function MoreInfo() {
+    const params = useParams()
   return (
-    <div>MoreInfo</div>
+    <>{console.log(params.country)}</>
   )
 }
+ 
