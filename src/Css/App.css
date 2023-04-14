@@ -56,4 +56,43 @@ header {
 }
 .card__text__info {
   font-weight: 300;
+}
+
+.moreInfo {
+  padding: 0 2em;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  box-shadow: 0px 0px 10px -2px #000000;
+  width: 104px;
+  padding: 0.5em 0;
+  margin-bottom: 3em;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.country__image {
+  border-radius: 1em;
+}
+@media (min-width: 500px) {
+  .country {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+.column__tag {
+  font-weight: 800;
+}
+
+.column__data {
+  font-weight: 300;
 }/*# sourceMappingURL=App.css.map */

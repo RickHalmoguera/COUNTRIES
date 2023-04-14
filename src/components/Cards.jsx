@@ -15,8 +15,9 @@ export function Cards(props) {
     const handleSearch = () =>{
         setFilter(searchRef.current.value)
     }
+
     useEffect(() => {
-        if(props.filter ==='All' || filter === '') {
+        if(filter ==='All' || filter === '') {
             API.GetAllCountries().then(setCountriesData)
         } else if(filter ==='Africa' || filter ==='Asia' || filter ==='Europe' || filter ==='America' || filter ==='Oceania') {
             API.GetCountriesByRegion(filter).then(setCountriesData)
@@ -42,8 +43,7 @@ export function Cards(props) {
     }
   
   return (
-    <>
-        
+    <>  
         <div className="search">
             <input onChange={handleSearch} className="search__input" type="text" placeholder="Search for a country..."  ref={searchRef}/>
             <select onChange={handleChange} className="search__select" id="region" ref={optionRef} >
@@ -56,6 +56,7 @@ export function Cards(props) {
                 <option value="Oceania">Oceania</option>
             </select>
         </div>
+        
         <div className="cards">  
             {countriesData.map((country) => (
                 <Link key={country.name.common}to={`/country/${country.name.common}`}>

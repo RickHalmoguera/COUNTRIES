@@ -5,6 +5,7 @@
     margin: 0;
 }
 
+
 header{
    padding:1em;
    -webkit-box-shadow: 0px 12px 14px -2px #000000; 
@@ -33,6 +34,7 @@ header{
     justify-content: center;
     gap: 2em;
 }
+
 .card{
     box-shadow: 0px 0px 10px -2px #000000;
     border-radius: 1em;
@@ -61,3 +63,43 @@ header{
     }
 }
 
+.moreInfo{
+    padding: 0 2em ;
+   
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    box-shadow: 0px 0px 10px -2px #000000;
+    width: 104px ;
+    padding: .5em 0; 
+    margin-bottom: 3em;
+}
+
+.country{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    &__image{
+        border-radius: 1em;
+    }    
+
+    @media (min-width: 500px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+}
+
+.column__tag{
+    font-weight: 800;
+}
+
+.column__data{
+    font-weight: 300
+}
