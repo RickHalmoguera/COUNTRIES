@@ -10,11 +10,12 @@ function App() {
       <header className="header">
             <h1 className="header__title">Where in the world?</h1>
       </header>
-
-      <Routes>
-        <Route path='/' element={<Cards/>}/>
-        <Route path='country/:country' element={<MoreInfo/>}/>
-      </Routes>
+      <div className="content">
+        <Routes>
+          <Route path='/' element={<Cards/>}/>
+          <Route path='country/:country' element={<MoreInfo/>}/>
+        </Routes>
+      </div>
     </>
   )
 }
